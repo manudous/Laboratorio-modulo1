@@ -1,0 +1,57 @@
+@import "_variables.scss";
+@import "_box";
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  .box {
+    @include box;
+  }
+}
+
+.container-1 {
+  .box {
+    background-color: $color1;
+
+    @for $i from 1 through 4 {
+      &.darken-#{$i} {
+        background-color: darken($color1, ($i * 6));
+      }
+      &.lighten-#{$i} {
+        background-color: lighten($color1, ($i * 6));
+      }
+    }
+  }
+}
+
+.container-2 {
+  .box {
+    background-color: $color2;
+
+    @for $i from 1 through 4 {
+      &.darken-#{$i} {
+        background-color: darken($color2, ($i * 6));
+      }
+      &.lighten-#{$i} {
+        background-color: lighten($color2, ($i * 6));
+      }
+    }
+  }
+}
+
+.container-3 {
+  .box {
+    background-color: $color3;
+
+    @for $i from 1 through 4 {
+      &.darken-#{$i} {
+        background-color: darken($color3, ($i * 6));
+      }
+      &.lighten-#{$i} {
+        background-color: lighten($color3, ($i * 6));
+      }
+    }
+  }
+}

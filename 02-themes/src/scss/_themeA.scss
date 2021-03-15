@@ -1,0 +1,31 @@
+@import "_variables.scss";
+@import "mixins.scss";
+
+.container {
+  @include container;
+
+  .box {
+    @include box;
+
+    &.base-box {
+      background-color: $color1;
+    }
+    &.important-box {
+      background-color: $color2;
+    }
+    &.warning-box {
+      background-color: $color3;
+    }
+    &.text-box {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      .primary-font {
+        font-family: $primaryFont;
+      }
+    }
+    &.shadow-box {
+      box-shadow: $boxShadowA;
+    }
+  }
+}

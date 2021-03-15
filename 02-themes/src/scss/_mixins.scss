@@ -1,0 +1,16 @@
+@mixin box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-top: 0.1rem;
+  width: 15vw;
+  height: 10vh;
+  font-family: $secondaryFont;
+}
+
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
